@@ -1,0 +1,135 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.logo-text {
+  color: white;
+  font-weight: bold;
+  font-family: 'Audiowide', cursive; /* Apply Audiowide font */
+}
+
+.logo {
+  width: 30px; /* Reduced size */
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Reduced size */
+  height: 24px; /* Reduced size */
+  float: right;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px; /* Adjusted size */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Adjusted size */
+  width: 16px; /* Adjusted size */
+  left: 4px; /* Adjusted position */
+  bottom: 4px; /* Adjusted position */
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px); /* Adjusted translation */
+  -ms-transform: translateX(16px); /* Adjusted translation */
+  transform: translateX(16px); /* Adjusted translation */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px; /* Adjusted size */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Additional styles for risk status indicator */
+
+.hero {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.risk-status {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.risk-level {
+  font-weight: bold;
+}
+
+.box {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.low.box {
+  background-color: green;
+}
+
+.mid.box {
+  background-color: orange;
+}
+
+.high.box {
+  background-color: red;
+}
+
+.setting-icon {
+  /* Add styles for setting icon */
+  /* You can use a background image or icon font for the setting icon */
+  /* Example: */
+  background-image: url('setting-icon.png'); /* Add path to your setting icon image */
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  display: inline-block;
+}
